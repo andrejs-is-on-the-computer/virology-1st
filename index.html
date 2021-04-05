@@ -1,0 +1,77 @@
+<script src="javascript/index.js"></script>
+<script src="javascript/javascript.js"></script>
+<script src="data/symptoms.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+<link rel = "stylesheet" href = "css/w3.css">
+<link rel = "stylesheet" href = "css/bepis.css">
+<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<style>
+
+
+</style>
+<html>
+  <body>
+
+    <div id="top" class="row">
+      <h3 id="title">Top bar content</h3>
+    </div>
+    <div class="row">
+      <div class="column left">
+
+      </div>
+
+      <div class="column right">
+        <div id="table_section"></div>
+
+        <div class="w3-container w3-center w3-animate-bottom">
+          <div id='selected_table'></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+var symptoms = return_symptoms();
+var display_symptoms = [];
+create_symptoms_table(symptoms);
+update_selected_table();
+
+
+
+$("#symptoms tr").click(function(){
+  var unselected = $(this).hasClass('unselected');
+  var selected = $(this).hasClass('selected');
+  if (unselected) {
+     $(this).removeClass('unselected');
+     $(this).addClass('selected');
+   }
+   if (selected){
+     $(this).removeClass('selected');
+     $(this).addClass('unselected');
+   }
+   var value=$(this).find('td:first').html();
+});
+
+// $('.symbol').click(function() {
+//     $(this).toggleClass('fa fa-caret-square-o-up');
+//     $(this).toggleClass('fa fa-caret-square-o-down');
+// });
+
+$(document).ready( function () {
+    $('#symptoms').DataTable({
+      paging: false,
+      info: false
+    });
+});
+$(document).ready( function () {
+    $('#symptoms_selected').DataTable({
+      paging: false,
+      searching: false,
+      info: false
+    });
+});
+</script>

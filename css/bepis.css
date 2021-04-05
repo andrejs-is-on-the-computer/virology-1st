@@ -1,0 +1,94 @@
+body {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#selected_title {
+  margin: 5px;
+  text-align: right;
+  float: right;
+  color: white;
+  cursor: pointer;
+}
+/* 48466d, 3d84a8, 46cdcf, abedd8 */
+#top {
+  background-color: #48466d;
+  color: white;
+  margin: 0px;
+}
+
+#selected_table table {
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+#title {
+  margin: 0px;
+}
+
+#symptoms_filter {
+  padding: 8px;
+}
+
+#selected_title {
+  background-color: #48466d;
+  width: 100%;
+  margin: 0px;
+  padding: 10px 5px 10px 5px;
+}
+
+#symptoms, #selected_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table_section {
+  padding: 25px;
+  padding-bottom: 100px;
+}
+
+#symptoms td, #symptoms th, #selected_table td, #selected_table th {
+  border: 0.5px solid #fff;
+  padding: 8px;
+}
+
+.selected {
+  background-color: #3d84a8 !important;
+}
+
+.unselected {
+  background-color: #fff;
+}
+
+#symptoms tr:hover, #symptoms_selected tr:hover {
+  background-color: #46cdcf;
+  color: white;
+  cursor: pointer;
+}
+
+#symptoms th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #48466d;
+  color: white;
+}
+
+#selected_table th {
+  text-align: left;
+  background-color: #48466d;
+  color: white;
+}
+
+#selected_table {
+  position: fixed;
+  display: block;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 99.5%;
+  background-color: #fff;
+}
+
+table {
+  font-size: 12px;
+}
